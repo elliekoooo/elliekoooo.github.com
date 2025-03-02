@@ -47,12 +47,13 @@ export default {
         "glitch": "glitch 0.2s infinite",
         "glitchColor": "glitchColor 0.5s infinite alternate",
         "slide": "slide 1s ease-in-out forwards",
-        "blink": "blink 1s",
+        "blink": "blink 1s infinite",
         "scanLine": "scanLine 5s ease-in-out infinite",
         "scanLine2": "scanLine 7s ease-in-out infinite",
         "selected": "selected 0.2s infinite",
         "fadeInScale": "fadeInScale 0.5s ease-out",
         "driftIn": "driftIn 0.8s ease-out",
+        "typing": "typing 3s steps(30, end) forwards"
       },
       keyframes: {
         glitch: {
@@ -96,6 +97,10 @@ export default {
         driftIn: {
           "0%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" }
+        },
+        typing: {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" }
         }
       },
     },

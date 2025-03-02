@@ -5,6 +5,8 @@ type card = {
     animation: string;
     margin: string;
     direction: 'col' | 'row';
+    height?: string,
+    width?: string,
     font: font    
 } & PropsWithChildren;
 
@@ -14,11 +16,11 @@ type font = {
     style: string
 }
 
-export const Card:React.FC<any> = ({ animation, margin, direction, font, children }: card) => {
+export const Card:React.FC<any> = ({ animation, margin, height, width, direction, font, children }: card) => {
     return (
-        <div className={`flex flex-${direction} h-[100vh] font-${font.style} text-${font.color} text-${font.weight} animate-${animation}`}>
+        <div className={`flex flex-${direction} h-full font-${font.style} text-${font.color} text-${font.weight} animate-${animation}`}>
             <div className={`${margin}`}>
-                <div className={`relative w-full max-w-xl bg-black/10 backdrop-blur-xl border border-white/20 shadow-xl rounded-lg p-6 overflow-hidden`}>
+                <div className={`relative ${height} ${width} w-full max-w-xl bg-black/10 backdrop-blur-xl border border-white/20 shadow-xl rounded-lg p-6 overflow-hidden`}>
                     <div className={`flex flex-${direction} my-auto text-left px-1`}>
                         { children }
                     </div>
