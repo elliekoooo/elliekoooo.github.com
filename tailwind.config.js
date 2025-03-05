@@ -10,7 +10,8 @@ export default {
       map: 'url(images/map.png)',
       hud2: 'url(/images/hud2.png)',
       spaceship: 'url(/images/spaceship.jpg)',
-      earth: 'url(/images/earth.jpg)'
+      earth: 'url(/images/earth.jpg)',
+      neon: 'url(/images/neon.png)'
     },
     extend: {
       colors: {
