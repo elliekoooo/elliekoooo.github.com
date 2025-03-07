@@ -4,7 +4,6 @@ import { Navigation } from "../components/Navigation";
 
 export const OverView = () => {
 
-
     return (
         <div className="w-screen h-screen bg-nightSky flex flex-col items-center justify-center">
           <div className="relative shadow-neon-blue rounded-full w-[80vw] h-[90vh] overflow-hidden bg-earth bg-cover">
@@ -16,7 +15,7 @@ export const OverView = () => {
                   <div className="w-16 h-16 rounded-full border-2 border-neonBlue shadow-[0_0_10px_#00FFFF] overflow-hidden">
                     <img src="/images/profile.png" alt="Agent" className="w-full h-full object-cover" />
                   </div>
-                  <div className="mx-5 text-2xl font-bold tracking-widest text-neonBlue font-audioWide drop-shadow-text-border2">ELLIE KOO</div>
+                  <div className="mx-5 text-2xl font-bold tracking-widest text-neonBlue font-audioWide drop-shadow-text-border2 animate-twingkle">ELLIE KOO</div>
                 </div>
                 <div className="flex flex-row">
                   <p className="text-sm text-white/60 mt-2 font-vt323 mr-auto uppercase">[ CLASSIFIED PERSONNEL ]</p>
@@ -24,7 +23,7 @@ export const OverView = () => {
                 </div>
                 <div className="font-oxanium text-white/60 w-full flex flex-col mt-4 p-2 border border-neonBlue rounded-lg shadow-[0_0_10px_#00FFFF] bg-black/30">
                   <span className="text-xl my-3 mx-5">A goal-oriented, collaborative,<br/>
-                    <span className="text-neonBlue text-xl font-bold drop-shadow-text-border">frontend-focused</span> web developer.</span>
+                    <span className="text-neonBlue text-xl font-bold drop-shadow-text-border animate-twingkle">frontend-focused</span> web developer.</span>
                   <span className="text-sm my-1 mx-5">I specialize in 
                     <span className="text-neonBlue text-xl font-bold drop-shadow-text-border mx-3">React, Angular and TypeScript</span>
                     with a focus on writing efficient, maintainable code.

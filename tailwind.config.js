@@ -11,7 +11,8 @@ export default {
       hud2: 'url(/images/hud2.png)',
       spaceship: 'url(/images/spaceship.jpg)',
       earth: 'url(/images/earth.jpg)',
-      neon: 'url(/images/neon.png)'
+      neon: 'url(/images/neon.png)',
+      star: 'url(images/star.png)'
     },
     extend: {
       colors: {
@@ -46,7 +47,6 @@ export default {
       },
       animation: {
         "glitch": "glitch 0.2s infinite",
-        "glitchColor": "glitchColor 0.5s infinite alternate",
         "slide": "slide 1s ease-in-out forwards",
         "blink": "blink 1s infinite",
         "scanLine": "scanLine 5s ease-in-out infinite",
@@ -54,7 +54,9 @@ export default {
         "selected": "selected 0.2s infinite",
         "fadeInScale": "fadeInScale 0.5s ease-out",
         "driftIn": "driftIn 0.8s ease-out",
-        "typing": "typing 3s steps(30, end) forwards"
+        "typing": "typing 3s steps(30, end) forwards",
+        "twingkle": "twingkle 0.3s forwards",
+        "spinSlow": "spinSlow 10s linear infinite",
       },
       keyframes: {
         glitch: {
@@ -64,11 +66,6 @@ export default {
           "60%": { transform: "translate(-2px, -2px)", opacity: "0.8" },
           "80%": { transform: "translate(2px, 2px)", opacity: "0.9" },
           "100%": { transform: "translate(0, 0)", opacity: "1" },
-        },
-        glitchColor: {
-          "0%": { color: "grey" }, // 빨간색
-          "50%": { color: "#00FFFF" }, // 초록색
-          "100%": { color: "#8A2BE2" }, // 파란색
         },
         slide: {
           "0%": { transform: "translateX(0%)" },
@@ -102,6 +99,15 @@ export default {
         typing: {
           "0%": { width: "0%" },
           "100%": { width: "100%" }
+        },
+        twingkle: {
+          "0%":  { opacity: "1"},
+          "50%": { opacity: "0.1"},
+          "100%": { opacity: "1"}
+        },
+        spinSlow: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
         }
       },
     },
