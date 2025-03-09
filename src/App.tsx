@@ -1,23 +1,16 @@
 import './App.css'
-import { Navigate, Route, Routes } from 'react-router-dom';
-import { OverView } from './\blayouts/Overview';
-import { About } from './\blayouts/About';
-import { Projects } from './\blayouts/Projects';
-import { Contacts } from './\blayouts/Contacts';
 import { Provider } from 'react-redux';
 import store from './store';
+import { OverView } from './layouts/Overview';
+import { About } from './layouts/About';
+import { Projects } from './layouts/Projects';
+import { ScrollSection } from './components/ScrollSection';
 
-function App() {
+function App() {  const sections = [<OverView/>, <About/>, <Projects/>];
 
   return (
     <Provider store={store}>
-      <Routes>
-        <Route index path={""}   element={<Navigate to="/overview" replace />}></Route>
-        <Route path={"overview"} element={<OverView />}></Route>
-        <Route path={"about"}    element={<About />}></Route>
-        <Route path={"projects"} element={<Projects />}></Route>
-        <Route path={"contacts"} element={<Contacts />}></Route>
-      </Routes>
+        <ScrollSection sections={sections}></ScrollSection>
     </Provider>
   )
 }

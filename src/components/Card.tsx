@@ -24,7 +24,7 @@ export const Card:React.FC<any> = ({ animation, margin, height, width, direction
                     <div className={`flex flex-${direction} my-auto text-left px-1`}>
                         { children }
                     </div>
-                    <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-neonBlue"></div>
+                    <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2  border-neonBlue"></div>
                     <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-neonBlue"></div>
                     <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-neonBlue"></div>
                     <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-neonBlue"></div>

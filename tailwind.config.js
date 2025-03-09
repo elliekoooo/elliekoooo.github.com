@@ -1,3 +1,5 @@
+import { height } from '@fortawesome/free-brands-svg-icons/fa42Group';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -9,10 +11,16 @@ export default {
       galaxy: 'url(images/galaxy.jpg)',
       map: 'url(images/map.png)',
       hud2: 'url(/images/hud2.png)',
+      hud4: 'url(/images/hud4.jpg)',
       spaceship: 'url(/images/spaceship.jpg)',
       earth: 'url(/images/earth.jpg)',
       neon: 'url(/images/neon.png)',
-      star: 'url(images/star.png)'
+      star: 'url(images/star.png)',
+      milkyway: 'url(/images/milkyway.png)',
+      space: 'url(/images/space.png)',
+      threeDspace: 'url(/images/3d_dark_space.jpg)',
+      noise1: 'url(/images/broken-noise.png)',
+      noise2: 'url(/images/diagonal-noise.png)'
     },
     extend: {
       colors: {
@@ -46,7 +54,7 @@ export default {
         "text-border2": "0 2.5px 2.5px rgb(255,255,255,0.5)"
       },
       animation: {
-        "glitch": "glitch 0.2s infinite",
+        "glitch": "glitch 1.2s infinite",
         "slide": "slide 1s ease-in-out forwards",
         "blink": "blink 1s infinite",
         "scanLine": "scanLine 5s ease-in-out infinite",
@@ -56,16 +64,19 @@ export default {
         "driftIn": "driftIn 0.8s ease-out",
         "typing": "typing 3s steps(30, end) forwards",
         "twingkle": "twingkle 0.3s forwards",
-        "spinSlow": "spinSlow 10s linear infinite",
+        "spinSlow": "spinSlow 20s linear infinite",
+        "slideUp": "slideUp 2s infinite",
+        "slideDown": "slideDown 2s infinite",
+        "radar": "radar 5s linear infinite",
+        "warp": "warp 2s infinite linear",
+        "dataScroll": "dataScroll 10s linear infinite"
+
       },
       keyframes: {
         glitch: {
-          "0%": { transform: "translate(0, 0)", opacity: "1" },
-          "20%": { transform: "translate(-2px, 2px)", opacity: "0.8" },
-          "40%": { transform: "translate(2px, -2px)", opacity: "0.9" },
-          "60%": { transform: "translate(-2px, -2px)", opacity: "0.8" },
-          "80%": { transform: "translate(2px, 2px)", opacity: "0.9" },
-          "100%": { transform: "translate(0, 0)", opacity: "1" },
+          "0%": { opacity: "1" },
+          "50%": { opacity: "0.7", transform: "translateX(-2px)" },
+          "100%": { opacity: "1", transform: "translateX(2px)" },
         },
         slide: {
           "0%": { transform: "translateX(0%)" },
@@ -108,6 +119,27 @@ export default {
         spinSlow: {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
+        },
+        slideUp: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(10%)" }
+        },
+        slideDown: {
+          "0%, 100%": { transform: "translateY(10%)" },
+          "50%": { transform: "translateY(0)" }
+        },
+        radar: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        warp: {
+          "0%": { height: "0%" },
+          "50%": { height: "50%" },
+          "100%": { height: "100%" }
+        },
+        dataScroll: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100%)" },
         }
       },
     },
